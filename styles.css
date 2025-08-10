@@ -1,0 +1,91 @@
+/* =================================================================
+   1. Basic Styling
+      ================================================================= */
+      body {
+          font-family: Arial, sans-serif;
+              display: flex;
+                  justify-content: center;
+                      align-items: center;
+                          flex-direction: column;
+                              min-height: 100vh;
+                                  margin: 0;
+                                      background-color: #f0f2f5;
+                                          color: #333;
+                                          }
+
+                                          main {
+                                              text-align: center;
+                                              }
+
+                                              button {
+                                                  padding: 10px 20px;
+                                                      font-size: 16px;
+                                                          cursor: pointer;
+                                                              background-color: #007bff;
+                                                                  color: white;
+                                                                      border: none;
+                                                                          border-radius: 5px;
+                                                                              margin-bottom: 20px;
+                                                                              }
+
+                                                                              /* =================================================================
+                                                                                 2. Transition Property
+                                                                                    - This section creates a smooth color change on hover.
+                                                                                       ================================================================= */
+                                                                                       .animation-box {
+                                                                                           width: 250px;
+                                                                                               height: 150px;
+                                                                                                   margin: 20px;
+                                                                                                       padding: 10px;
+                                                                                                           display: flex;
+                                                                                                               flex-direction: column;
+                                                                                                                   justify-content: center;
+                                                                                                                       align-items: center;
+                                                                                                                           border-radius: 10px;
+                                                                                                                               box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                                                                                                                               }
+
+                                                                                                                               #transition-box {
+                                                                                                                                   background-color: #ff9a8b;
+                                                                                                                                       /* transition-property: The properties we want to transition. */
+                                                                                                                                           /* transition-duration: How long the transition takes. */
+                                                                                                                                               /* transition-timing-function: The speed curve of the transition. */
+                                                                                                                                                   transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+                                                                                                                                                   }
+
+                                                                                                                                                   #transition-box:hover {
+                                                                                                                                                       background-color: #55c57a;
+                                                                                                                                                           transform: scale(1.1); /* An additional property to transition */
+                                                                                                                                                           }
+
+                                                                                                                                                           /* =================================================================
+                                                                                                                                                              3. Keyframe Animations
+                                                                                                                                                                 - This section defines a more complex, continuous animation.
+                                                                                                                                                                    ================================================================= */
+                                                                                                                                                                    #animation-box {
+                                                                                                                                                                        background-color: #ffd700;
+                                                                                                                                                                            /*
+                                                                                                                                                                                  animation-name: The name of the @keyframes rule to use.
+                                                                                                                                                                                        animation-duration: The length of the animation.
+                                                                                                                                                                                              animation-iteration-count: How many times the animation should run (infinite for continuous).
+                                                                                                                                                                                                    animation-direction: Whether the animation should alternate between start and end.
+                                                                                                                                                                                                          animation-timing-function: The speed curve of the animation.
+                                                                                                                                                                                                              */
+                                                                                                                                                                                                                  animation: pulse 2s infinite alternate ease-in-out;
+                                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                                  /*
+                                                                                                                                                                                                                    @keyframes: This rule defines the sequence of CSS styles for the animation.
+                                                                                                                                                                                                                      - 0% and 100% represent the start and end of the animation.
+                                                                                                                                                                                                                        - We can define styles at any point in the animation timeline.
+                                                                                                                                                                                                                        */
+                                                                                                                                                                                                                        @keyframes pulse {
+                                                                                                                                                                                                                            0% {
+                                                                                                                                                                                                                                    transform: scale(1);
+                                                                                                                                                                                                                                            box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
+                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                    100% {
+                                                                                                                                                                                                                                                            transform: scale(1.05);
+                                                                                                                                                                                                                                                                    box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                        }
